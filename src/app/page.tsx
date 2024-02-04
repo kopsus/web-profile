@@ -1,0 +1,87 @@
+"use client"
+
+import Image from "next/image"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import Typewriter from "typewriter-effect"
+
+// assets
+import imgPerson from "@/../public/person-poto.svg"
+import {
+  DeviconGithub,
+  DeviconGitlab,
+  LogosLinkedinIcon,
+  SkillIconsInstagram,
+} from "@/components/Icon"
+import { AnimatedOut } from "@/components/AllAnimated"
+
+export default function Home() {
+  return (
+    <>
+      <div className="mt-10 md:h-[90vh] md:mt-0 md:flex md:flex-col md:justify-center lg:flex-row lg:items-center lg:h-[80vh]">
+        <div className="lg:order-2 lg:flex-1">
+          <motion.div
+            variants={AnimatedOut}
+            initial="initial"
+            animate="animate"
+            className="overflow-hidden w-56 h-56 mx-auto rounded-full shadow-sm lg:w-[80%] lg:h-full lg:float-right"
+          >
+            <Image
+              src={imgPerson}
+              alt="person"
+              className="w-full h-full object-cover block"
+            />
+          </motion.div>
+        </div>
+        <div className="text-center flex flex-col gap-5 pt-5 lg:order-1 lg:flex-1 lg:text-start">
+          <div className="text-2xl font-bold lg:text-5xl lg:leading-normal">
+            <h1>Hello I’am Tegar Setio</h1>
+            <Typewriter
+              options={{
+                strings: ["Full Stack Developer", "From Indonesia"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
+          <p className="">
+            Sebagai pengembang website, saya berdedikasi untuk mengubah ide
+            menjadi aplikasi web yang inovatif. Jelajahi proyek terbaru saya,
+            yang menunjukkan keahlian saya dalam pengembangan web.
+          </p>
+          <div className="flex items-center justify-center gap-10 lg:justify-start my-3">
+            <motion.div className="cursor-pointer" whileHover={{ y: -5 }}>
+              <Link href={"https://www.instagram.com/tegaar_s/"}>
+                <SkillIconsInstagram />
+              </Link>
+            </motion.div>
+            <motion.div className="cursor-pointer" whileHover={{ y: -5 }}>
+              <Link href={"https://www.linkedin.com/in/tegar-setio-b00b73234/"}>
+                <LogosLinkedinIcon />
+              </Link>
+            </motion.div>
+            <motion.div className="cursor-pointer" whileHover={{ y: -5 }}>
+              <Link href={"https://github.com/kopsus"}>
+                <DeviconGithub />
+              </Link>
+            </motion.div>
+            <motion.div className="cursor-pointer" whileHover={{ y: -5 }}>
+              <Link href={"https://gitlab.com/kopsuss"}>
+                <DeviconGitlab />
+              </Link>
+            </motion.div>
+          </div>
+          <div className="flex items-center justify-center gap-10 font-semibold lg:justify-start">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              className="bg-black text-white"
+            >
+              Resume
+            </motion.button>
+            <motion.button whileHover={{ scale: 1.05 }}>Contact</motion.button>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
