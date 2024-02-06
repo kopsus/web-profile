@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-white dark:bg-black;
+  }
+}
+
+@layer components {
+  button {
+    @apply py-2 px-4 border-2 border-black rounded-md text-black dark:border-white dark:text-white;
+  }
+}
+
 button {
-  padding: 8px 16px;
-  border: 2px solid black;
-  border-radius: 5px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 

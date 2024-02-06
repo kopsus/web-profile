@@ -5,19 +5,22 @@ import React, { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
+// hooks
+import useThemeSwitcher from "@/components/hooks/useThemeSwitcher"
+
 // icons
 import { Divide as Hamburger } from "hamburger-react"
 import { usePathname } from "next/navigation"
-import { LineMdMoonRisingFilledLoop } from "./Icon"
+import { LineMdMoonRisingFilledLoop, LineMdSunRisingLoop } from "./Icon"
 
 const CustomLink = ({ href, title }) => {
   const currentRoute = usePathname()
   return (
-    <Link href={href} className="relative group">
+    <Link href={href} className="relative group text-black dark:text-white">
       {title}
 
       <span
-        className={`h-[2px] absolute bottom-0 left-0 bg-white lg:bg-black group-hover:w-full transition-full duration-300 ${
+        className={`h-[2px] absolute bottom-0 left-0 bg-white dark:bg-black lg:bg-black lg:dark:bg-white group-hover:w-full transition-full duration-300 ${
           currentRoute === href ? "w-full" : "w-0"
         }`}
       ></span>
@@ -27,6 +30,7 @@ const CustomLink = ({ href, title }) => {
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false)
+  const [mode, setMode] = useThemeSwitcher()
   return (
     <>
       <div className="relative flex items-center justify-between py-5">
@@ -38,7 +42,7 @@ const Navbar = () => {
             isOpen ? "scale-100" : "scale-0 lg:scale-100 lg:opacity-100"
           }`}
         >
-          <nav className="w-full bg-black bg-opacity-80 flex flex-col gap-10 items-center py-10 rounded-lg text-white text-xl font-medium lg:flex-row lg:p-0 lg:text-black lg:bg-transparent lg:gap-16">
+          <nav className="w-full bg-black bg-opacity-80 flex flex-col gap-10 items-center py-10 rounded-lg text-white font-medium lg:flex-row lg:p-0 lg:text-black lg:bg-transparent lg:gap-16">
             <div onClick={() => setOpen(false)}>
               <CustomLink href="/" title="Home" />
             </div>
@@ -72,9 +76,14 @@ const Navbar = () => {
             whileHover={{
               scale: 1.05,
             }}
-            className="border shadow-md rounded-full p-1 cursor-pointer"
+            className="border shadow-md rounded-full p-1 cursor-pointer dark:border-black dark:bg-white"
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
           >
-            <LineMdMoonRisingFilledLoop />
+            {mode === "dark" ? (
+              <LineMdSunRisingLoop />
+            ) : (
+              <LineMdMoonRisingFilledLoop />
+            )}
           </motion.div>
         </div>
       </div>

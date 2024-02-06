@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
-import { Montserrat, Poppins } from "next/font/google"
+import { Poppins } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 const montserrat = Poppins({ subsets: ["latin"], weight: "400" })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )

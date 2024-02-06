@@ -4,17 +4,18 @@ import { motion, useScroll } from "framer-motion"
 import Link from "next/link"
 import React, { useRef } from "react"
 import LilIcon from "./LilIcon"
-import { AnimatedShowTop } from "@/components/AllAnimated"
+import { AnimatedShowTopWhileInView } from "@/components/AllAnimated"
 
 const DetailsEducation = ({ title, desc, date, companyLink }) => {
   const ref = useRef(null)
   return (
     <motion.div
-      variants={AnimatedShowTop}
+      variants={AnimatedShowTopWhileInView}
       initial="initial"
       animate="animate"
+      whileInView="whileInView"
       ref={ref}
-      className="flex flex-col gap-2 my-10"
+      className="flex flex-col gap-2 my-10 text-black dark:text-white"
     >
       <LilIcon references={ref} />
       <Link
@@ -40,14 +41,16 @@ const Education = () => {
   return (
     <>
       <div className="my-32">
-        <h2 className="text-center font-semibold text-4xl">Educations</h2>
+        <h2 className="text-center font-semibold text-4xl text-black dark:text-white">
+          Educations
+        </h2>
         <div
           ref={ref}
           className="relative w-11/12 mx-auto mt-10 md:mt-20 lg:w-1/2"
         >
           <motion.div
             style={{ scaleY: scrollYProgress }}
-            className="absolute left-1 top-0 origin-top w-[2px] bg-black h-full"
+            className="absolute left-1 top-0 origin-top w-[2px] bg-black h-full dark:bg-blue-200 lg:w-1"
           ></motion.div>
 
           <div className="ps-10">

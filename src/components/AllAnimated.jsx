@@ -24,6 +24,22 @@ export const AnimatedShowTop = {
   },
 }
 
+export const AnimatedShowTopWhileInView = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 2,
+    },
+  },
+  whileInView: {
+    y: 0,
+  },
+}
+
 export const AnimatedShowBottom = {
   initial: {
     opacity: 0,
