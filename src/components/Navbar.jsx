@@ -74,10 +74,10 @@ const Navbar = () => {
           </motion.div>
           <motion.div
             whileHover={{
-              scale: 1.05,
+              scale: 1.1,
             }}
             className="border shadow-md rounded-full p-1 cursor-pointer dark:border-black dark:bg-white"
-            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            onClick={() => setMode(mode === "dark" ? "light" : "dark")}
           >
             {mode === "dark" ? (
               <LineMdSunRisingLoop />

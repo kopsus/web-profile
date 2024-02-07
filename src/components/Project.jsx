@@ -22,7 +22,7 @@ const DetailProject = ({
 }) => {
   return (
     <motion.div
-      className="card_shadow rounded-xl p-5 border-black border"
+      className="shadow-xl shadow-black dark:shadow-white rounded-xl p-5 border-black border dark:border-white"
       variants={AnimatedShowTopWhileInView}
       initial="initial"
       animate="animate"
@@ -37,18 +37,22 @@ const DetailProject = ({
           className="cursor-pointer hover:scale-105 transition-all"
         />
       </div>
-      <div className="mt-3">
+      <div className="mt-3 text-black dark:text-white">
         <p className="font-semibold">{title}</p>
         <p className="text-sm">{desc}</p>
         <div className="flex items-center gap-3 mt-3">
-          <Link href={scLink} target="_blank">
+          <Link
+            href={scLink}
+            target="_blank"
+            className="hover:scale-110 transition-all"
+          >
             {iconGit}
           </Link>
           {demoLink && (
             <Link
               href={linkVisit}
               target="_blank"
-              className="bg-black rounded-md px-5 py-1 text-white"
+              className="bg-black rounded-md px-5 py-1 text-white dark:bg-white dark:text-black hover:scale-110 transition-all"
             >
               {demoLink}
             </Link>
