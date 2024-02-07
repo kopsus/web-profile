@@ -83,7 +83,9 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               className="bg-black text-white dark:bg-white dark:text-black"
             >
-              Resume
+              <Link href={"/Tegar Setio.pdf"} target="_blank" download={true}>
+                Resume
+              </Link>
             </motion.button>
             <motion.button whileHover={{ scale: 1.05 }}>
               <Link href={"https://wa.me/62882005090497"} target="_blank">

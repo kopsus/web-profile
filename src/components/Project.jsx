@@ -9,7 +9,7 @@ import webProfile from "@/../public/project_webProfile.png"
 import Shoestock from "@/../public/project_shoestock.png"
 import ladampa from "@/../public/project_ladampa.png"
 import psikocare from "@/../public/project_psikocare.png"
-import { DeviconGithub } from "./Icon"
+import { DeviconGithub, DeviconGitlab } from "./Icon"
 import { AnimatedShowTopWhileInView } from "./AllAnimated"
 
 const DetailProject = ({
@@ -75,10 +75,8 @@ const Project = () => {
           desc={
             "Psikocare merupakan platform konsultasi psikologi daring yang menyediakan layanan konsultasi langsung kepada dokter psikolog melalui fitur chat, yang di bangun menggunakan teknologi Next js, Tailwind css, Express js, Postgresql"
           }
-          demoLink={"Visit"}
-          linkVisit={"https://profiletegar.netlify.app/"}
-          scLink={"https://github.com/kopsus/ladampa"}
-          iconGit={<DeviconGithub />}
+          scLink={"https://gitlab.com/kopsuss/psikocare"}
+          iconGit={<DeviconGitlab />}
         />
         <DetailProject
           image={Shoestock}
@@ -86,8 +84,7 @@ const Project = () => {
           desc={
             "Merancang dan Mengembangkan Aplikasi Inventori Online yang Elegan dengan Menggabungkan Teknologi Next.js, Tailwind CSS, Express.js, dan PostgreSQL untuk Optimalisasi Pencatatan dan Manajemen Keluar-Masuk Barang."
           }
-          linkVisit={"https://ladampa.netlify.app/"}
-          scLink={"https://github.com/kopsus/web-profile"}
+          scLink={"https://github.com/pendragonnn/final-project-inventory-web"}
           iconGit={<DeviconGithub />}
         />
         <DetailProject

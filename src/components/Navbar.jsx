@@ -16,7 +16,7 @@ import { LineMdMoonRisingFilledLoop, LineMdSunRisingLoop } from "./Icon"
 const CustomLink = ({ href, title }) => {
   const currentRoute = usePathname()
   return (
-    <Link href={href} className="relative group text-black dark:text-white">
+    <Link href={href} className="relative group text-white dark:text-black">
       {title}
 
       <span
@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <>
       <div className="relative flex items-center justify-between py-5">
-        <div className="flex z-50 lg:hidden">
+        <div className="flex z-50 lg:hidden dark:text-white">
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
         <div
@@ -42,7 +42,7 @@ const Navbar = () => {
             isOpen ? "scale-100" : "scale-0 lg:scale-100 lg:opacity-100"
           }`}
         >
-          <nav className="w-full bg-black bg-opacity-80 flex flex-col gap-10 items-center py-10 rounded-lg text-white font-medium lg:flex-row lg:p-0 lg:text-black lg:bg-transparent lg:gap-16">
+          <nav className="w-full bg-black dark:bg-white bg-opacity-80 flex flex-col gap-10 items-center py-10 rounded-lg font-medium lg:flex-row lg:p-0 lg:text-black lg:bg-transparent lg:gap-16">
             <div onClick={() => setOpen(false)}>
               <CustomLink href="/" title="Home" />
             </div>
