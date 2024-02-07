@@ -8,6 +8,7 @@ import { motion } from "framer-motion"
 import webProfile from "@/../public/project_webProfile.png"
 import Shoestock from "@/../public/project_shoestock.png"
 import ladampa from "@/../public/project_ladampa.png"
+import psikocare from "@/../public/project_psikocare.png"
 import { DeviconGithub } from "./Icon"
 import { AnimatedShowTopWhileInView } from "./AllAnimated"
 
@@ -69,10 +70,10 @@ const Project = () => {
       <h2 className="text-center font-semibold text-3xl">Projects</h2>
       <div className="mt-10 grid gap-10 h-max md:grid-cols-2 lg:gap-20">
         <DetailProject
-          image={ladampa}
-          title={"Ladampa"}
+          image={psikocare}
+          title={"Psikocare"}
           desc={
-            "Website untuk melaporkan sampah yang tidak terkelola oleh pemerintah khususnya di daerah Banyumas, di bangung menggunakan teknologi next js, tailwind css"
+            "Psikocare merupakan platform konsultasi psikologi daring yang menyediakan layanan konsultasi langsung kepada dokter psikolog melalui fitur chat, yang di bangun menggunakan teknologi Next js, Tailwind css, Express js, Postgresql"
           }
           demoLink={"Visit"}
           linkVisit={"https://profiletegar.netlify.app/"}

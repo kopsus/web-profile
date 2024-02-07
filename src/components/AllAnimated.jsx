@@ -30,12 +30,12 @@ export const AnimatedShowTopWhileInView = {
     y: 50,
   },
   animate: {
-    opacity: 1,
     transition: {
       duration: 2,
     },
   },
   whileInView: {
+    opacity: 1,
     y: 0,
   },
 }

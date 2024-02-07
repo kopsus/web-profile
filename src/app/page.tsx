@@ -10,7 +10,7 @@ import imgPerson from "@/../public/person-poto.svg"
 import {
   DeviconGithub,
   DeviconGitlab,
-  LogosLinkedinIcon,
+  DeviconLinkedin,
   SkillIconsInstagram,
 } from "@/components/Icon"
 import { AnimatedOut, AnimatedShowTop } from "@/components/AllAnimated"
@@ -64,7 +64,7 @@ export default function Home() {
             </motion.div>
             <motion.div className="cursor-pointer" whileHover={{ y: -5 }}>
               <Link href={"https://www.linkedin.com/in/tegar-setio-b00b73234/"}>
-                <LogosLinkedinIcon />
+                <DeviconLinkedin />
               </Link>
             </motion.div>
             <motion.div className="cursor-pointer" whileHover={{ y: -5 }}>
@@ -85,7 +85,11 @@ export default function Home() {
             >
               Resume
             </motion.button>
-            <motion.button whileHover={{ scale: 1.05 }}>Contact</motion.button>
+            <motion.button whileHover={{ scale: 1.05 }}>
+              <Link href={"https://wa.me/62882005090497"} target="_blank">
+                Contact
+              </Link>
+            </motion.button>
           </div>
         </motion.div>
       </div>

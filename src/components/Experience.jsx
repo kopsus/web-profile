@@ -10,7 +10,7 @@ const DetailExperience = ({ title, desc, date, company, companyLink }) => {
   const ref = useRef(null)
 
   return (
-    <motion.div
+    <div
       ref={ref}
       className="flex flex-col gap-2 my-10 text-black dark:text-white"
       variants={AnimatedShowTopWhileInView}
@@ -19,15 +19,22 @@ const DetailExperience = ({ title, desc, date, company, companyLink }) => {
       whileInView="whileInView"
     >
       <LilIcon references={ref} />
-      <div className="text-xl font-semibold flex gap-2 ">
-        <p className="">{title}</p>
-        <Link href={companyLink} target="_blank" className="text-sky-600">
-          {company}
-        </Link>
-      </div>
-      <p>{desc}</p>
-      <p className="text-sm">{date}</p>
-    </motion.div>
+      <motion.div
+        variants={AnimatedShowTopWhileInView}
+        initial="initial"
+        animate="animate"
+        whileInView="whileInView"
+      >
+        <div className="text-xl font-semibold flex gap-2 ">
+          <p className="">{title}</p>
+          <Link href={companyLink} target="_blank" className="text-sky-600">
+            {company}
+          </Link>
+        </div>
+        <p>{desc}</p>
+        <p className="text-sm">{date}</p>
+      </motion.div>
+    </div>
   )
 }
 

@@ -9,25 +9,28 @@ import { AnimatedShowTopWhileInView } from "@/components/AllAnimated"
 const DetailsEducation = ({ title, desc, date, companyLink }) => {
   const ref = useRef(null)
   return (
-    <motion.div
-      variants={AnimatedShowTopWhileInView}
-      initial="initial"
-      animate="animate"
-      whileInView="whileInView"
+    <div
       ref={ref}
       className="flex flex-col gap-2 my-10 text-black dark:text-white"
     >
       <LilIcon references={ref} />
-      <Link
-        href={companyLink}
-        target="_blank"
-        className="text-xl font-semibold hover:text-sky-600"
+      <motion.div
+        variants={AnimatedShowTopWhileInView}
+        initial="initial"
+        animate="animate"
+        whileInView="whileInView"
       >
-        {title}
-      </Link>
-      <p>{desc}</p>
-      <p className="text-sm">{date}</p>
-    </motion.div>
+        <Link
+          href={companyLink}
+          target="_blank"
+          className="text-xl font-semibold hover:text-sky-600"
+        >
+          {title}
+        </Link>
+        <p>{desc}</p>
+        <p className="text-sm">{date}</p>
+      </motion.div>
+    </div>
   )
 }
 
