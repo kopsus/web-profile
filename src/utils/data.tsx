@@ -149,9 +149,9 @@ export const educations = [
   },
   {
     id: "2",
-    title: "IT Telkom Purwokerto",
+    title: "Telkom University Purwokerto",
     companyLink: "https://ittelkom-pwt.ac.id/",
-    desc: "Active student at the Telkom Purwokerto Institute of Technology, Informatics Engineering study program",
+    desc: "Active student at the Telkom University Purwokerto, Informatics Engineering study program",
     date: "2021 - Now",
   },
 ];
