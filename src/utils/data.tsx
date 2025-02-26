@@ -5,6 +5,8 @@ import {
   FaReact,
   FaGithub,
   FaGitlab,
+  FaPhp,
+  FaLaravel,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -59,6 +61,16 @@ export const skills = [
     id: "9",
     icon: <SiExpress size={40} />,
     name: "Express Js",
+  },
+  {
+    id: "10",
+    icon: <FaPhp size={40} />,
+    name: "PHP",
+  },
+  {
+    id: "11",
+    icon: <FaLaravel size={40} />,
+    name: "Laravel",
   },
 ];
 
