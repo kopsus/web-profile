@@ -48,7 +48,7 @@ const DetailProject = ({
       </div>
       <div className="mt-3 text-black dark:text-white">
         <p className="font-semibold">{title}</p>
-        <p className="text-sm">{desc}</p>
+        <p className="text-sm line-clamp-3">{desc}</p>
         <div className="flex items-center gap-3 mt-3">
           <Link
             href={scLink}
@@ -78,7 +78,7 @@ const Project = () => {
       <h2 className="text-center font-semibold text-3xl dark:text-white">
         Projects
       </h2>
-      <div className="mt-10 grid gap-10 h-max md:grid-cols-2 lg:gap-20">
+      <div className="mt-10 grid gap-5 h-max md:grid-cols-2 lg:grid-cols-3">
         {projects.map((item, index) => (
           <DetailProject
             key={index}

@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const montserrat = Poppins({ subsets: ["latin"], weight: "400" });
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Tegar Setio",
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} px-5 md:px-20 min-h-screen max-w-[1400px] mx-auto`}
+        className={`${poppins.className} px-5 md:px-20 min-h-screen max-w-[1400px] mx-auto`}
       >
         <Navbar />
         {children}

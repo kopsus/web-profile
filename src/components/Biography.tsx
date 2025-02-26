@@ -36,17 +36,16 @@ const Biography = () => {
         >
           <h3 className="text-2xl font-semibold">Biography</h3>
           <p>
-            Hi, I'm Tegar Setio, I am a Software Engineer specializing in Web
-            Development. I have contributed to a wide range of projects, from
-            large-scale initiatives to small business ventures. Currently, I
-            work part-time as a Front-End Engineer at PT. Kreatif Indonesia, and
-            I am also a freelancer on the fastwork platform.
+            Hi, my name is Tegar Setio. A software engineer specializing in web
+            development, with 1 year of experience in the industry, I have
+            contributed to various projects, ranging from large-scale projects
+            to small business ventures.
           </p>
           <p>
-            When I work on a website or other digital product, I committed to
-            website excellence and centered thinking on users on every project I
-            work on. I'm looking forward the opportunity to bring my skills and
-            passion to the project You're next.
+            When working on a website or other digital product, I am committed
+            to achieving website excellence and focusing on the user in every
+            project I work on. I look forward to the opportunity to bring my
+            skills and passion to this project. You are next.
           </p>
         </motion.div>
       </div>

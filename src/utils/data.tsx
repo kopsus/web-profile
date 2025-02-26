@@ -52,7 +52,7 @@ export const skills = [
   },
   {
     id: "8",
-    icon: <SiNextdotjs size={40} color="#000" />,
+    icon: <SiNextdotjs size={40} />,
     name: "Next Js",
   },
   {
@@ -108,6 +108,15 @@ export const projects = [
     git: <FaGithub size={40} />,
     link_demo: "https://web-admin-ksm-kudubisa.netlify.app/",
   },
+  {
+    id: "6",
+    image: "/ksm.png",
+    title: "KSM KuduBisa",
+    desc: "KSM KuduBisa merupakan suatu kelompok swadaya masyarakat di kabupaten Banyumas yang bertugas untuk memgambil, memilah dan mengelola sampah",
+    link_repo: "https://github.com/kopsus/ksm-kudubisa",
+    git: <FaGithub size={40} />,
+    link_demo: "https://ksm-kudubisa.my.id/",
+  },
 ];
 
 export const experiences = [
@@ -135,7 +144,7 @@ export const experiences = [
     companyLink:
       "https://www.linkedin.com/company/sineaskreatifindonesia/mycompany/",
     desc: "Freelance Front-End Engineer, specializing in developing enterprise application interfaces using Next.js, Tailwind css and TypeScript.",
-    date: "1 August 2024 - Now",
+    date: "1 August 2024 - 1 Februari 2025",
   },
 ];
 
@@ -152,6 +161,6 @@ export const educations = [
     title: "Telkom University Purwokerto",
     companyLink: "https://ittelkom-pwt.ac.id/",
     desc: "Active student at the Telkom University Purwokerto, Informatics Engineering study program",
-    date: "2021 - Now",
+    date: "Oktober 2021 - Februari 2025",
   },
 ];
